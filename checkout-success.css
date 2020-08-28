@@ -1,0 +1,472 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*color*/
+/*font size*/
+/*color*/
+/*font size*/
+.body {
+  margin: 0 auto;
+}
+
+/*container*/
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+/*header*/
+.header {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0px;
+}
+
+.header-inner .mobile-nav {
+  display: none;
+  background-image: url("https://hexschool.github.io/webLayoutTraining1st/student-week1/dehaze-24px.png");
+  padding: 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.header-inner h1 a {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logo-all-dark.svg);
+  height: 40px;
+  width: 215px;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header-inner .header-inner-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-inner .header-inner-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 19px;
+}
+
+.header-inner .header-inner-nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #3F5D45;
+  padding: 10px 30px;
+}
+
+.header-inner .header-inner-nav ul li a:hover {
+  background-color: #3F5D45;
+  color: #EAF0ED;
+}
+
+@media (max-width: 768px) {
+  .header-inner h1 a {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-lg-dark.svg);
+    height: 18px;
+    width: 115px;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-inner .mobile-nav {
+    display: block;
+  }
+  .header-inner .header-inner-nav ul {
+    display: none;
+  }
+  .header-inner .header-inner-nav ul li {
+    display: none;
+  }
+  .header-inner .header-inner-nav ul li a {
+    display: none;
+  }
+}
+
+/*subscribe*/
+.subscribe {
+  background-color: #2C4832;
+}
+
+.subscribe-inner {
+  width: 75%;
+  height: 116px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subscribe-inner .subscribe-inner-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscribe-inner .subscribe-inner-left img {
+  width: 40px;
+  height: 40px;
+}
+
+.subscribe-inner .subscribe-inner-left p {
+  color: #EAF0ED;
+  font-size: 24px;
+}
+
+.subscribe-inner .subscribe-inner-right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.subscribe-inner .subscribe-inner-right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.subscribe-inner .subscribe-inner-right form .email {
+  width: 251px;
+  height: 54px;
+  background-color: #EAF0ED;
+  border: none;
+}
+
+.subscribe-inner .subscribe-inner-right form .submit {
+  width: 64px;
+  height: 56px;
+  background-color: #FFE180;
+  border: none;
+}
+
+.subscribe-inner .subscribe-inner-right .iconmail {
+  position: absolute;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+.subscribe-inner .subscribe-inner-right .iconforward {
+  position: absolute;
+  left: 280px;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .subscribe-inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 0px;
+  }
+}
+
+@media (max-width: 568px) {
+  .subscribe-inner .subscribe-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/*footer*/
+.footer {
+  background-color: #EAF0ED;
+  padding: 30px 0px;
+}
+
+.footer .footer-inner {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.footer .footer-inner .footer-inner-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-inner .footer-inner-left img {
+  height: 27px;
+  width: 172px;
+  display: block;
+}
+
+.footer .footer-inner .footer-inner-left ul li {
+  color: #3F5D45;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer .footer-inner .footer-inner-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .footer-inner .footer-inner-right .straight {
+  display: block;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 24px;
+  line-height: 30px;
+  color: #3F5D45;
+}
+
+@media (max-width: 568px) {
+  .footer .footer-inner .footer-inner-right {
+    display: none;
+  }
+}
+
+.footer .footer-bottom {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.footer .footer-bottom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-bottom ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3F5D45;
+}
+
+.footer .footer-bottom ul li a img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  padding-right: 8px;
+}
+
+@media (max-width: 568px) {
+  .footer .footer-bottom ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.checkout {
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.checkout .bg2 {
+  display: none;
+}
+
+.checkout .ckeckout-inner {
+  margin: 0 auto;
+}
+
+.checkout .ckeckout-inner .checkout-inner-inner {
+  margin: 0 auto;
+  left: 375px;
+  top: 130px;
+  position: absolute;
+}
+
+.checkout .ckeckout-inner .checkout-inner-inner .checkicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkout .ckeckout-inner .checkout-inner-inner .checkicon hr {
+  border: solid #3F5D45 1px;
+  width: 66px;
+  height: 0px;
+  margin: 0px;
+  display: block;
+}
+
+.checkout .ckeckout-inner .checkout-inner-inner .checkicon img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.checkout .ckeckout-inner .checkout-inner-inner .checkout-success1 {
+  width: 190px;
+  height: auto;
+  display: block;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.checkout .ckeckout-inner a {
+  width: 300px;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+  text-decoration: none;
+  color: #3F5D45;
+  background-color: #FFE180;
+  font-size: 24px;
+  display: block;
+  position: absolute;
+  left: 320px;
+  top: 279px;
+}
+
+@media (max-width: 568px) {
+  .checkout .bg1 {
+    display: none;
+  }
+  .checkout .bg2 {
+    display: block;
+  }
+  .checkout .ckeckout-inner .checkout-inner-inner {
+    margin: 0 auto;
+    left: 90px;
+    top: 210px;
+    position: absolute;
+  }
+  .checkout .ckeckout-inner a {
+    top: 517px;
+    left: 0px;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=checkout-success.css.map */

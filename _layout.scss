@@ -1,0 +1,246 @@
+@import"variable";
+@mixin pad{
+    @media(max-width: 768px){
+      @content;
+    }
+}
+  
+@mixin mobile{
+    @media(max-width: 568px){
+      @content;
+    }
+}
+.body{
+    margin:0 auto;
+}
+/*container*/
+.container{
+    margin:0 auto;
+    max-width: 1024px;
+}
+/*header*/
+.header{
+    max-width: 940px;
+    margin:0 auto;
+}
+.header-inner{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    .mobile-nav{
+        display: none;
+        background-image: url("https://hexschool.github.io/webLayoutTraining1st/student-week1/dehaze-24px.png");
+        padding: 25px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    h1{
+        a{
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logo-all-dark.svg) ;
+            height: 40px;
+            width: 215px;
+            display: block;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    .header-inner-nav{
+        display: flex;    
+        align-items: center;   
+        ul{
+            display: flex; 
+            margin-right: 19px; 
+            li{
+                a{
+                    display: flex;
+                    text-decoration: none;
+                    color: $mgreen ;
+                    padding: 10px 30px;
+                }
+                a:hover{
+                    background-color: $mgreen;
+                    color: $lgreen;
+                }
+            }
+        }
+    }
+    @include pad(){
+        h1{
+            a{
+                background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-lg-dark.svg) ;
+                height: 18px;
+                width: 115px;
+                display: block;
+                text-indent: 101%;
+                overflow: hidden;
+                white-space: nowrap;
+                align-items: center;
+            }
+        }
+        .mobile-nav{
+            display: block;
+        }
+        .header-inner-nav{
+            ul{ 
+                display: none;
+                li{
+                    display: none;
+                    a{
+                        display: none;
+                    }                  
+                }
+            }
+        }
+        
+    }
+    @include mobile(){
+        
+    }
+    
+}
+/*subscribe*/
+.subscribe{
+    background-color: $dgreen;
+}
+.subscribe-inner{
+    width: 75%;
+    height: 116px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    .subscribe-inner-left{
+        display: flex;
+        align-items: center;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+        p{
+            color: $lgreen;
+            font-size: $font-l;
+        }
+    }
+    .subscribe-inner-right{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        form{
+            display: flex;
+            flex-wrap: nowrap;
+            .email{
+                width: 251px;
+                height: 54px;
+                background-color: $lgreen;   
+                border: none; 
+            }
+            .submit{           
+                width: 64px;
+                height: 56px;
+                background-color: $yellow;
+                border: none; 
+            }
+        }
+        .iconmail{
+            position: absolute;
+            left: 20px;
+            width: 24px;
+            height: 24px;
+        }
+        .iconforward{
+            position: absolute;
+            left: 280px;
+            width: 16px;
+            height: 16px;
+        }
+    }   
+    @include pad(){
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px;
+    }
+    @include mobile(){
+        .subscribe-inner{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+/*footer*/
+.footer{
+    background-color: $lgreen;
+    padding: 30px 0px;
+    .footer-inner{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        .footer-inner-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img{
+                height: 27px;
+                width: 172px;
+                display: block;
+            }
+            ul{
+                li{
+                    color: $mgreen;
+                    font-size: $font-s;   
+                    line-height: 24px;         
+                }
+            }
+        }    
+        .footer-inner-right{
+            display: flex;
+            flex-direction: column;
+            .straight{
+                display: block;  
+                writing-mode: vertical-rl;
+                font-size: 24px;
+                line-height: 30px;
+                color: $mgreen;
+            }         
+        }
+        @include mobile(){
+            .footer-inner-right{
+                display: none;
+            }
+            
+        }
+            
+    }
+    .footer-bottom{
+        width: 75%;
+        margin: 0 auto;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                display: flex;
+                color: $mgreen;
+                a{
+                    img{
+                        width: 32px;
+                        height: 32px;
+                        display: block;
+                        padding-right: 8px;
+                    }
+                }
+                
+            }
+        }
+        @include mobile(){
+            ul{
+                display: flex;
+                flex-wrap: wrap;             
+            }            
+        }
+    }
+}
